@@ -13,12 +13,11 @@ def shared_pods
   pod 'Kingfisher'
   pod 'SwiftLint'
   pod 'SwiftyJSON'
-  pod 'Wormholy', :configurations => ['Debug']
+	pod 'Wormholy'
 end
 target 'Seed' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for Seed
 	shared_pods
 

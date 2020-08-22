@@ -13,8 +13,17 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		if UIApplication.shared.isDebugMode == false {
+			
+		}
 	}
 
 
 }
-
+//
+//extension UIApplication {
+//	var isDebugMode: Bool {
+//		let dictionary = ProcessInfo.processInfo.environment
+//		return dictionary["DEBUGMODE"] != nil
+//	}
+//}
