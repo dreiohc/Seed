@@ -1,0 +1,6 @@
+framework module Pods_Seed {
+  umbrella header "Pods-Seed-umbrella.h"
+
+  export *
+  module * { export * }
+}

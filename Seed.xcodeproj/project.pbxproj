@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7968BAA77782DC4F180B50 /* Pods_Seed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020F789DEADC7C5A930A5F85 /* Pods_Seed.framework */; };
 		C44225ED24F0DE6300FDD8F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44225EC24F0DE6300FDD8F3 /* AppDelegate.swift */; };
 		C44225EF24F0DE6300FDD8F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44225EE24F0DE6300FDD8F3 /* SceneDelegate.swift */; };
 		C44225F124F0DE6300FDD8F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44225F024F0DE6300FDD8F3 /* ViewController.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020F789DEADC7C5A930A5F85 /* Pods_Seed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A785F80092A927F8311F4208 /* Pods-Seed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seed.debug.xcconfig"; path = "Target Support Files/Pods-Seed/Pods-Seed.debug.xcconfig"; sourceTree = "<group>"; };
 		C44225E924F0DE6300FDD8F3 /* Seed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44225EC24F0DE6300FDD8F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44225EE24F0DE6300FDD8F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C44225F824F0DE6400FDD8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44225FB24F0DE6400FDD8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C44225FD24F0DE6400FDD8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F3843823C1ECD1A12BFC95 /* Pods-Seed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seed.release.xcconfig"; path = "Target Support Files/Pods-Seed/Pods-Seed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7968BAA77782DC4F180B50 /* Pods_Seed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		614F850D539CB80222213D0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				020F789DEADC7C5A930A5F85 /* Pods_Seed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C401E86C592908A2372A2C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A785F80092A927F8311F4208 /* Pods-Seed.debug.xcconfig */,
+				C8F3843823C1ECD1A12BFC95 /* Pods-Seed.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C44225E024F0DE6300FDD8F3 = {
 			isa = PBXGroup;
 			children = (
 				C44225EB24F0DE6300FDD8F3 /* Seed */,
 				C44225EA24F0DE6300FDD8F3 /* Products */,
+				C401E86C592908A2372A2C8B /* Pods */,
+				614F850D539CB80222213D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +83,15 @@
 		C44225EB24F0DE6300FDD8F3 /* Seed */ = {
 			isa = PBXGroup;
 			children = (
+				C442260424F0E90E00FDD8F3 /* Models */,
+				C442260524F0E91900FDD8F3 /* Views */,
+				C442260B24F0EB4100FDD8F3 /* ViewModels */,
+				C442260324F0E90300FDD8F3 /* View Controllers */,
+				C442260924F0EA4E00FDD8F3 /* Model Controllers */,
+				C442260A24F0EA5900FDD8F3 /* Constant */,
+				C442260824F0E95000FDD8F3 /* Resources */,
+				C442260724F0E93400FDD8F3 /* Protocols */,
+				C442260624F0E92400FDD8F3 /* Extensions */,
 				C44225EC24F0DE6300FDD8F3 /* AppDelegate.swift */,
 				C44225EE24F0DE6300FDD8F3 /* SceneDelegate.swift */,
 				C44225F024F0DE6300FDD8F3 /* ViewController.swift */,
@@ -70,6 +104,69 @@
 			path = Seed;
 			sourceTree = "<group>";
 		};
+		C442260324F0E90300FDD8F3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C442260424F0E90E00FDD8F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C442260524F0E91900FDD8F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C442260624F0E92400FDD8F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C442260724F0E93400FDD8F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C442260824F0E95000FDD8F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C442260924F0EA4E00FDD8F3 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		C442260A24F0EA5900FDD8F3 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		C442260B24F0EB4100FDD8F3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C442260024F0DE6400FDD8F3 /* Build configuration list for PBXNativeTarget "Seed" */;
 			buildPhases = (
+				13C279875EDD473D972CE25F /* [CP] Check Pods Manifest.lock */,
 				C44225E524F0DE6300FDD8F3 /* Sources */,
 				C44225E624F0DE6300FDD8F3 /* Frameworks */,
 				C44225E724F0DE6300FDD8F3 /* Resources */,
+				42B9D62213932D97D55222AC /* [CP] Embed Pods Frameworks */,
+				C8D076E8793E3A904C0F2625 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +235,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13C279875EDD473D972CE25F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Seed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42B9D62213932D97D55222AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D076E8793E3A904C0F2625 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C44225E524F0DE6300FDD8F3 /* Sources */ = {
@@ -286,10 +445,12 @@
 		};
 		C442260124F0DE6400FDD8F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A785F80092A927F8311F4208 /* Pods-Seed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Seed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,16 +458,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myrondulay.Seed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C442260224F0DE6400FDD8F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8F3843823C1ECD1A12BFC95 /* Pods-Seed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Seed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myrondulay.Seed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
