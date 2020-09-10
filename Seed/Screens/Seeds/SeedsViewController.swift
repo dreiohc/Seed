@@ -9,20 +9,19 @@
 import UIKit
 
 class SeedsViewController: UIViewController {
-	
 	let data = [
 		SeedData(title: "My First Seed"),
 		SeedData(title: "My Second Seed"),
-		SeedData(title: "My Third Seed"),
+		SeedData(title: "My Third Seed")
 	]
-	
+
 	fileprivate let collectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
-		let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-		cv.translatesAutoresizingMaskIntoConstraints = false
-		cv.register(SeedViewCell.self, forCellWithReuseIdentifier: "cell")
-		return cv
+		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		collectionView.translatesAutoresizingMaskIntoConstraints = false
+		collectionView.register(SeedViewCell.self, forCellWithReuseIdentifier: "cell")
+		return collectionView
 	}()
 	
 	override func viewDidLoad() {
@@ -41,9 +40,11 @@ class SeedsViewController: UIViewController {
 		self.collectionView.isPagingEnabled = true
 		self.collectionView.backgroundColor = .seedCream
 		self.collectionView.layer.cornerRadius = 2.0
+		
 		let screenSize = UIScreen.main.bounds
 		let screenHeight = screenSize.height
 		let screenWidth = screenSize.width
+		
 		NSLayoutConstraint.activate([
 			self.collectionView.widthAnchor.constraint(equalToConstant: (screenWidth * 0.7)),
 			self.collectionView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -53,20 +54,7 @@ class SeedsViewController: UIViewController {
 	}
 }
 
-
-extension SeedsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return data.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeedViewCell
-		cell.data = self.data[indexPath.row]
-		cell.backgroundColor = .seedMagenta
-		cell.layer.cornerRadius = 4.0
-		return cell
-	}
+extension SeedsViewController: UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 		return 10
@@ -83,3 +71,18 @@ extension SeedsViewController: UICollectionViewDelegateFlowLayout, UICollectionV
 	
 }
 
+extension SeedsViewController: UICollectionViewDataSource {
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return data.count
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeedViewCell
+		cell.data = self.data[indexPath.row]
+		cell.backgroundColor = .seedMagenta
+		cell.layer.cornerRadius = 4.0
+		return cell
+	}
+	
+}

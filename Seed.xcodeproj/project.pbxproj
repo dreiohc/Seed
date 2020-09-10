@@ -215,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C442260024F0DE6400FDD8F3 /* Build configuration list for PBXNativeTarget "Seed" */;
 			buildPhases = (
+				C46EB2FD250A4533007A3D23 /* SwiftLint */,
 				13C279875EDD473D972CE25F /* [CP] Check Pods Manifest.lock */,
 				C44225E524F0DE6300FDD8F3 /* Sources */,
 				C44225E624F0DE6300FDD8F3 /* Frameworks */,
@@ -317,6 +318,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Seed/Pods-Seed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C46EB2FD250A4533007A3D23 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		C8D076E8793E3A904C0F2625 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -26,7 +26,6 @@ class SeedViewCell: UICollectionViewCell {
 		return title
 	}()
 	
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		contentView.addSubview(label)
@@ -40,4 +39,3 @@ class SeedViewCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 }
-
