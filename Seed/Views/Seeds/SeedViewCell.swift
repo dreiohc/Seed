@@ -9,7 +9,7 @@
 import UIKit
 
 class SeedViewCell: UICollectionViewCell {
-	
+
 	var data: SeedData? {
 		didSet {
 			guard let data = data else { return }
@@ -23,6 +23,7 @@ class SeedViewCell: UICollectionViewCell {
 		title.numberOfLines = 0
 		title.translatesAutoresizingMaskIntoConstraints = false
 		title.textAlignment = .center
+    title.font = UIFont(name: "HelveticaNeue-Bold", size: 30.0)
 		return title
 	}()
 	
