@@ -23,14 +23,23 @@ class SeedsViewController: UIViewController {
 		collectionView.register(SeedViewCell.self, forCellWithReuseIdentifier: "cell")
 		return collectionView
 	}()
-	
+  
+  fileprivate let button: UIButton = {
+    let title = UIButton()
+    title.setTitle("Done", for: .normal)
+    title.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 20.0)
+    title.translatesAutoresizingMaskIntoConstraints = false
+    title.backgroundColor = .seedPaleGreen
+    return title
+  }()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
+    self.view.backgroundColor = .seedCream
 		self.setupCollectionView()
-		self.view.backgroundColor = .seedCream
-		
+    self.setupButton()
 	}
-	
+
 	private func setupCollectionView() {
 		view.addSubview(collectionView)
 		self.collectionView.backgroundColor = .white
@@ -40,11 +49,11 @@ class SeedsViewController: UIViewController {
 		self.collectionView.isPagingEnabled = true
 		self.collectionView.backgroundColor = .seedCream
 		self.collectionView.layer.cornerRadius = 2.0
-		
-		let screenSize = UIScreen.main.bounds
-		let screenHeight = screenSize.height
-		let screenWidth = screenSize.width
-		
+    
+    let screenSize = UIScreen.main.bounds
+    let screenHeight = screenSize.height
+    let screenWidth = screenSize.width
+    
 		NSLayoutConstraint.activate([
 			self.collectionView.widthAnchor.constraint(equalToConstant: (screenWidth * 0.7)),
 			self.collectionView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -52,31 +61,45 @@ class SeedsViewController: UIViewController {
 			self.collectionView.heightAnchor.constraint(equalToConstant: (screenHeight * 0.5))
 		])
 	}
+  
+  private func setupButton() {
+    view.addSubview(button)
+    let screenSize = UIScreen.main.bounds
+    let screenHeight = screenSize.height
+    let screenWidth = screenSize.width
+    
+    NSLayoutConstraint.activate([
+      self.button.topAnchor.constraint(equalTo: self.collectionView.bottomAnchor, constant: 40.0),
+      self.button.widthAnchor.constraint(equalToConstant: (screenWidth * 0.2)),
+      self.button.heightAnchor.constraint(equalToConstant: (screenHeight * 0.05)),
+      self.button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+    ])
+  }
 }
 
 extension SeedsViewController: UICollectionViewDelegateFlowLayout {
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 		return 10
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		let frameSize = collectionView.frame.size
 		return CGSize(width: frameSize.width - 10, height: frameSize.height)
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 		return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
 	}
-	
+
 }
 
 extension SeedsViewController: UICollectionViewDataSource {
-	
+
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return data.count
 	}
-	
+
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SeedViewCell
 		cell.data = self.data[indexPath.row]
