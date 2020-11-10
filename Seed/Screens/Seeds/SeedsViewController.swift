@@ -10,9 +10,9 @@ import UIKit
 
 class SeedsViewController: UIViewController {
 	let data = [
-		SeedData(title: "My First Seed"),
-		SeedData(title: "My Second Seed"),
-		SeedData(title: "My Third Seed")
+		SeedData(title: "Do 10 Push ups"),
+		SeedData(title: "Study 10 minutes"),
+		SeedData(title: "Walk outside for 30 minutes")
 	]
 
 	fileprivate let collectionView: UICollectionView = {
@@ -107,5 +107,5 @@ extension SeedsViewController: UICollectionViewDataSource {
 		cell.layer.cornerRadius = 4.0
 		return cell
 	}
-	
+
 }
