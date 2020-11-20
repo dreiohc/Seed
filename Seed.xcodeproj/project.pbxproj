@@ -15,7 +15,6 @@
 		C44225F724F0DE6300FDD8F3 /* Seed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C44225F524F0DE6300FDD8F3 /* Seed.xcdatamodeld */; };
 		C44225F924F0DE6400FDD8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44225F824F0DE6400FDD8F3 /* Assets.xcassets */; };
 		C44225FC24F0DE6400FDD8F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44225FA24F0DE6400FDD8F3 /* LaunchScreen.storyboard */; };
-		C46EB2F8250A38E0007A3D23 /* SeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB2F7250A38E0007A3D23 /* SeedViewCell.swift */; };
 		C46EB2FA250A39AE007A3D23 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB2F9250A39AE007A3D23 /* UIColor.swift */; };
 		C46EB2FC250A3AE2007A3D23 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46EB2FB250A3AE2007A3D23 /* UIColorExtension.swift */; };
 		C46FF1C4250910A900AD71BB /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FF1C3250910A900AD71BB /* SeedData.swift */; };
@@ -35,7 +34,6 @@
 		C44225F824F0DE6400FDD8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44225FB24F0DE6400FDD8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C44225FD24F0DE6400FDD8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C46EB2F7250A38E0007A3D23 /* SeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedViewCell.swift; sourceTree = "<group>"; };
 		C46EB2F9250A39AE007A3D23 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C46EB2FB250A3AE2007A3D23 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C46FF1C3250910A900AD71BB /* SeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		C4BF7D5D24F3F66C001688A2 /* Seeds */ = {
 			isa = PBXGroup;
 			children = (
-				C46EB2F7250A38E0007A3D23 /* SeedViewCell.swift */,
 			);
 			path = Seeds;
 			sourceTree = "<group>";
@@ -362,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44225F124F0DE6300FDD8F3 /* SeedsViewController.swift in Sources */,
-				C46EB2F8250A38E0007A3D23 /* SeedViewCell.swift in Sources */,
 				C46FF1C4250910A900AD71BB /* SeedData.swift in Sources */,
 				C44225ED24F0DE6300FDD8F3 /* AppDelegate.swift in Sources */,
 				C44225F724F0DE6300FDD8F3 /* Seed.xcdatamodeld in Sources */,

@@ -110,6 +110,7 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - iCarousel (1.8.3)
   - KeychainSwift (19.0.0)
   - Kingfisher (5.13.2):
     - Kingfisher/Core (= 5.13.2)
@@ -132,6 +133,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - GoogleSignIn
+  - iCarousel
   - KeychainSwift
   - Kingfisher
   - SwiftLint
@@ -162,6 +164,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - iCarousel
     - KeychainSwift
     - Kingfisher
     - leveldb-library
@@ -193,6 +196,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
@@ -201,6 +205,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Wormholy: f01b096b449a9fcab864a10f7e5b5693b1225c88
 
-PODFILE CHECKSUM: 73d5be82312956035d557217e008f6899f5bfa23
+PODFILE CHECKSUM: 9edb99395f9bd75aed892beee6f9a46cae14a0a0
 
 COCOAPODS: 1.9.3
