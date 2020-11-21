@@ -13,9 +13,18 @@ import Wormholy
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  var window: UIWindow?
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+    
+    if #available(iOS 13, *) {
+      
+    } else {
+      self.window = UIWindow()
+      let vcs = SeedsViewController()
+      self.window?.rootViewController = vcs
+      self.window?.makeKeyAndVisible()
+    }
 		FirebaseApp.configure()
 		return true
 	}
