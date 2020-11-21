@@ -27,15 +27,6 @@ class SeedsViewController: UIViewController {
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
-  
-  fileprivate let button: UIButton = {
-    let title = UIButton()
-    title.setTitle("Done", for: .normal)
-    title.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 20.0)
-    title.translatesAutoresizingMaskIntoConstraints = false
-    title.backgroundColor = .seedPaleGreen
-    return title
-  }()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -103,7 +94,6 @@ extension SeedsViewController: iCarouselDataSource {
     
     view.addSubview(label)
     label.text = data[index].title
-    label.textColor = .white
     
     NSLayoutConstraint.activate([
       label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
